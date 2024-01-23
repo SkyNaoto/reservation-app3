@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { products } from '../../products';
 
 @Component({
   selector: 'app-product-listings',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./product-listings.component.scss']
 })
 export class ProductListComponent {
-  products: any =[1,2,3,4]
+  products: any
+
+  ngOnInit(){
+    this.products = products
+  }
 }

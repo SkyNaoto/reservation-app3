@@ -13,7 +13,7 @@ export class ProductDetailComponent implements OnInit{
 
   ngOnInit() {
     this.route.paramMap.subscribe(params =>{
-      this.product = products[+params.get('productId')!]
+      this.product = products[+params.get('productId')!] // + params の +は、数値型に変更するという意味　products[] の配列に入れる値なので数値である必要があるため
     }) 
   }
 }

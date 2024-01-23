@@ -10,7 +10,7 @@ const routes: Routes = [
     path: 'products', component: ProductComponent,
     children:[
       { path: '', component: ProductListComponent},
-      { path: ':productId', component: ProductDetailComponent},    
+      { path: ':productId', component: ProductDetailComponent},  // : を変数の前につけると、動的なURLとして使用することができる。例えば、productIdに３が入ると、products/3 というURL として使う事ができる。もしコロンがなければ、products/productId というURLと解釈される  
     ]
   }
 ];
